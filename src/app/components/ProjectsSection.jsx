@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import { ProjectURLs } from "../constants/constants";
 
 const projectsData = [
     {
@@ -10,8 +11,8 @@ const projectsData = [
         description: "This is a portfolio website built using React.",
         image: "/images/projects/1.png",
         tag: ["All", "Web"],
-        gitUrl: "https://github.com/Katherine620/personal-porfolio",
-        previewUrl: "/"
+        gitUrl: ProjectURLs.PORTFOLIO_GITHUB,
+        previewUrl: ProjectURLs.PORTFOLIO_PREVIEW
     },
     {
         id: 2,
@@ -19,8 +20,8 @@ const projectsData = [
         description: "This is a website built and design by me.",
         image: "/images/projects/2.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "https://yiroadmed.com/"
+        gitUrl: ProjectURLs.YIROAD_GITHUB,
+        previewUrl: ProjectURLs.YIROAD_PREVIEW
     },
     {
         id: 3,
@@ -28,36 +29,36 @@ const projectsData = [
         description: "This is an application build with Java, Spring booths.",
         image: "/images/projects/3.png",
         tag: ["All", "Web", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/"
+        gitUrl: ProjectURLs.TO_DO_APP_GITHUB,
+        previewUrl: ProjectURLs.TO_DO_APP_PREVIEW
     },
-    {
-        id: 4,
-        title: "React Prtfolio Website",
-        description: "This is a portfolio website built using React.",
-        image: "/images/projects/1.png",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/"
-    },
-    {
-        id: 5,
-        title: "Yiroad Website",
-        description: "This is a website built and design by me.",
-        image: "/images/projects/2.png",
-        tag: ["All", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/"
-    },
-    {
-        id: 6,
-        title: "To dos Application",
-        description: "This is an application build with Java, Spring booths.",
-        image: "/images/projects/3.png",
-        tag: ["All", "Web", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/"
-    }
+    // {
+    //     id: 4,
+    //     title: "React Prtfolio Website",
+    //     description: "This is a portfolio website built using React.",
+    //     image: "/images/projects/1.png",
+    //     tag: ["All", "Web"],
+    //     gitUrl: "/",
+    //     previewUrl: "/"
+    // },
+    // {
+    //     id: 5,
+    //     title: "Yiroad Website",
+    //     description: "This is a website built and design by me.",
+    //     image: "/images/projects/2.png",
+    //     tag: ["All", "Mobile"],
+    //     gitUrl: "/",
+    //     previewUrl: "/"
+    // },
+    // {
+    //     id: 6,
+    //     title: "To dos Application",
+    //     description: "This is an application build with Java, Spring booths.",
+    //     image: "/images/projects/3.png",
+    //     tag: ["All", "Web", "Mobile"],
+    //     gitUrl: "/",
+    //     previewUrl: "/"
+    // }
 ];
 
 const ProjectsSection = () => {
