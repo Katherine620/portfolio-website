@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import Link from 'next/link';
+import { DownloadURLs } from '../constants/constants';
 
 const HeroSection = () => {
     return (
@@ -33,12 +35,20 @@ const HeroSection = () => {
                         With expertise in JavaScript, TypeScript, and Ruby, passionate about creating efficient web applications.
                     </p>
                     <div>
-                        <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-400 via-fuchsia-400 to bg-teal-400 hover:bg-slate-200 text-white">
+                        <Link 
+                            href="/#contact"
+                            className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-400 via-fuchsia-400 to bg-teal-400 hover:bg-slate-200 text-white"
+                        >
                             Hire Me
-                        </button>
-                        <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-400 via-fuchsia-400 to bg-teal-400 hover:bg-slate-800 text-white mt-3">
+                        </Link>
+                        <Link 
+                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-400 via-fuchsia-400 to bg-teal-400 hover:bg-slate-800 text-white mt-3"
+                            href={DownloadURLs.RESUME}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">Download CV</span>
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="col-span-5 place-self-center mt-4 lg:mt-0">

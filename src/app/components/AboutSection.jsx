@@ -5,20 +5,12 @@ import TabButton from "./TabButton";
 
 const Tab_Data = [
     {
-        title: "Skills",
-        id: "skills",
+        title: "Experience",
+        id: "experience",
         content: (
             <ul className="list-disc pl-2">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>React.js</li>
-                <li>Next.js</li>
-                <li>PostgreSQL</li>
-                <li>Ruby on Rails</li>
-                <li>Java</li>
-                <li>Go</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
+                <li>Full Stack Engineer at Cromatic</li>
+                <li>Software Engineer at Chowbus</li>
             </ul>
         ),
     },
@@ -34,19 +26,21 @@ const Tab_Data = [
         ),
     },
     {
-        title: "Experience",
-        id: "experience",
+        title: "Certifications",
+        id: "certifications",
         content: (
             <ul className="list-disc pl-2">
-                <li>Full Stack Engineer at Cromatic</li>
-                <li>Software Engineer at Chowbus</li>
+                <li>HackerRank - Frontend Developer (React) Certificate</li>
+                <li>HackerRank - Node.js (Intermediate) Certificate</li>
+                <li>Coursera - Java Programming: Solving Problems with Software</li>
+                <li>Coursera - Python for Data Science, AI & Development</li>
             </ul>
         ),
     },
 ];
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills");
+    const [tab, setTab] = useState("experience");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {
@@ -74,10 +68,10 @@ const AboutSection = () => {
                     </p>
                     <div className="flex flex-row justify-start mt-8">
                         <TabButton 
-                            selectTab={() => handleTabChange("skills")} 
-                            active={tab === "skills"}
+                            selectTab={() => handleTabChange("experience")} 
+                            active={tab === "experience"}
                         >
-                            Skills
+                            Experience
                         </TabButton>
                         <TabButton 
                             selectTab={() => handleTabChange("education")} 
@@ -86,10 +80,10 @@ const AboutSection = () => {
                             Education
                         </TabButton>
                         <TabButton 
-                            selectTab={() => handleTabChange("experience")} 
-                            active={tab === "experience"}
+                            selectTab={() => handleTabChange("certifications")} 
+                            active={tab === "certifications"}
                         >
-                            Experience
+                            Certifications
                         </TabButton>
                     </div>
                     <div className="mt-8">{Tab_Data.find((t) => t.id === tab).content}</div>
