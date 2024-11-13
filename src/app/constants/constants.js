@@ -11,3 +11,7 @@ export const SocialURLs = {
     GITHUB: "https://github.com/Katherine620",
     LINKEDIN: "https://www.linkedin.com/in/katherinexili/",
 }
+
+export const DownloadURLs = {
+    RESUME: "https://drive.google.com/file/d/1iBmDaCgOhelXWcmQdUsVulxKno-Zex6E/view?usp=sharing",
+}
