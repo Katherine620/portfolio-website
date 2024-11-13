@@ -1,6 +1,6 @@
 export const ProjectURLs = {
     PORTFOLIO_GITHUB: "https://github.com/Katherine620/personal-porfolio",
-    PORTFOLIO_PREVIEW: "",
+    PORTFOLIO_PREVIEW: "https://personal-porfolio-six-hazel.vercel.app/",
     YIROAD_GITHUB: "/",
     YIROAD_PREVIEW: "https://yiroadmed.com/",
     TO_DO_APP_GITHUB: "/",
