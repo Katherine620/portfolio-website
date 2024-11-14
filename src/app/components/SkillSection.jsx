@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import SkillCard from "./SkillCard";
+import { motion, useInView } from "framer-motion";
 // Database
 import PostgreSQLIcon from "../../../public/images/skills/database/postgresql.svg";
 import MongoDBIcon from "../../../public/images/skills/database/mongodb-icon.svg";
@@ -219,14 +221,30 @@ const skillsData = [
 ];
 
 const SkillSection = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    const cardVariants = {
+        initial: { y: -50, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+    };
+
     return (
         <section className="text-white mb-8" id="skills">
             <h1 className="text-center text-4xl font-bold mt-4 mb-8 md:mb-12">
                 Skills
             </h1>
-            <div className="grid grid-cols-3 md:grid-cols-9 gap-4 justify-items-center">
-                {skillsData.map((skill) => (
-                    <SkillCard key={skill.name} name={skill.name} path={skill.path} />
+            <div ref={ref} className="grid grid-cols-3 md:grid-cols-9 gap-4 justify-items-center">
+                {skillsData.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        variants={cardVariants} 
+                        initial="initial" 
+                        animate={isInView ? "animate": "initial"}
+                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                    >
+                        <SkillCard key={skill.name} name={skill.name} path={skill.path} />
+                    </motion.div>
                 ))}
             </div>
         </section>
