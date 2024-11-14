@@ -4,14 +4,20 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import Link from 'next/link';
 import { DownloadURLs } from '../constants/constants';
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
     return (
         <section>
             <div className="grid grid-cols-1 lg:grid-cols-12">
-                <div className="col-span-7 place-self-center text-center sm:text-left">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="col-span-7 place-self-center text-center sm:text-left"
+                >
                     <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-fuchsia-400 to bg-teal-400">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-tertiary-400 to bg-secondary-400">
                             Hello, I&apos;m{" "}
                         </span>
                         <br />
@@ -37,12 +43,12 @@ const HeroSection = () => {
                     <div>
                         <Link 
                             href="/#contact"
-                            className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-indigo-400 via-fuchsia-400 to bg-teal-400 hover:bg-slate-200 text-white"
+                            className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-400 via-tertiary-400 to bg-secondary-400 hover:bg-slate-200 text-white"
                         >
                             Hire Me
                         </Link>
                         <Link 
-                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-indigo-400 via-fuchsia-400 to bg-teal-400 hover:bg-slate-800 text-white mt-3"
+                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-400 via-tertiary-400 to bg-secondary-400 hover:bg-slate-800 text-white mt-3"
                             href={DownloadURLs.RESUME}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -50,8 +56,13 @@ const HeroSection = () => {
                             <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">Download CV</span>
                         </Link>
                     </div>
-                </div>
-                <div className="col-span-5 place-self-center mt-4 lg:mt-0">
+                </motion.div>
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="col-span-5 place-self-center mt-4 lg:mt-0"
+                >
                     <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
                         <Image
                             src="/images/hero-image.png"
@@ -61,7 +72,7 @@ const HeroSection = () => {
                             height={300}
                         />
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
