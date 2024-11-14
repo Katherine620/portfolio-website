@@ -15,3 +15,7 @@ export const SocialURLs = {
 export const DownloadURLs = {
     RESUME: "https://drive.google.com/file/d/1iBmDaCgOhelXWcmQdUsVulxKno-Zex6E/view?usp=sharing",
 }
+
+export const EmailInfo = {
+    MAIL_TO: "mailto:xili9620@gmail.com",
+}
