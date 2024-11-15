@@ -13,7 +13,7 @@ export const SocialURLs = {
 }
 
 export const DownloadURLs = {
-    RESUME: "https://drive.google.com/file/d/1iBmDaCgOhelXWcmQdUsVulxKno-Zex6E/view?usp=sharing",
+    RESUME: "/documents/Xi_Li_Resume.pdf",
 }
 
 export const EmailInfo = {
